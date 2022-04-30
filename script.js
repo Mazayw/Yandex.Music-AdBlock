@@ -15,7 +15,7 @@
     'use strict';
     setInterval(() => {
         const modalWindow = document.getElementsByClassName('crackdown-popup popup_compact local-theme-white local-icon-theme-white popup deco-pane-popup popup_modal');
-        document.getElementsByClassName('bar-below bar-below_plus')[0].classList.add('popup_hidden');
+        if (document.getElementsByClassName('bar-below bar-below_plus')) document.getElementsByClassName('bar-below bar-below_plus')[0].classList.add('popup_hidden');
         if (modalWindow.length) {
             if (!Object.values(modalWindow[0].classList).includes('popup_hidden')) {
                 document.getElementsByClassName('d-button deco-button deco-button-flat d-button_type_flat d-button_w-icon d-button_w-icon-centered crackdown-popup__close')[0].click();
