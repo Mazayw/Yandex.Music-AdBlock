@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AdBlock Yandex.Music
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Yandex.Music AdBlock
 // @author       Mazayw
 // @match        https://music.yandex.ru/*
