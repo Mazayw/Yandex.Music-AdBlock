@@ -8,8 +8,9 @@
 // @icon         https://www.google.com/s2/favicons?domain=yandex.ru
 // @license MIT
 // ==/UserScript==
-'use strict';
+
 (function () {
+    'use strict';
     setInterval(() => {
         const modalWindow = document.getElementsByClassName('crackdown-popup popup_compact local-theme-white local-icon-theme-white popup deco-pane-popup popup_modal');
         document.getElementsByClassName('bar-below bar-below_plus')[0].classList.add('popup_hidden');
