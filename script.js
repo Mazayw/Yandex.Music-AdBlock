@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AdBlock Yandex.Music
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.5
 // @description  Yandex.Music AdBlock
 // @author       Mazayw
 // @match        https://music.yandex.ru/*
@@ -10,9 +10,14 @@
 // @updateURL    https://raw.githubusercontent.com/Mazayw/Yandex.Music-AdBlock/main/script.js
 // @license MIT
 // ==/UserScript==
+const autoplay = true;
+
 
 (function () {
     'use strict';
+    if (autoplay) {
+        window.addEventListener('DOMContentLoaded', event => { setTimeout(() => { document.getElementsByClassName('rup__content-button-play')[0].click(); }, 1500); });
+    }
     if (document.getElementsByClassName('bar-below bar-below_plus')) document.getElementsByClassName('bar-below bar-below_plus')[0].classList.add('popup_hidden');
     setInterval(() => {
         const modalWindow = document.getElementsByClassName('crackdown-popup popup_compact local-theme-white local-icon-theme-white popup deco-pane-popup popup_modal');
