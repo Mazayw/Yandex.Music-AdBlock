@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AdBlock Yandex.Music
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.6
 // @description  Yandex.Music AdBlock
 // @author       Mazayw
 // @match        https://music.yandex.ru/*
@@ -16,7 +16,7 @@ const autoplay = true;
 (function () {
     'use strict';
     if (autoplay) {
-        window.addEventListener('DOMContentLoaded', event => { setTimeout(() => { document.getElementsByClassName('rup__content-button-play')[0].click(); }, 1500); });
+        window.onload = () => { document.getElementsByClassName('rup__content-button-play')[0].click(); };
     }
     if (document.getElementsByClassName('bar-below bar-below_plus')) document.getElementsByClassName('bar-below bar-below_plus')[0].classList.add('popup_hidden');
     setInterval(() => {
