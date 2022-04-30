@@ -6,6 +6,7 @@
 // @author       Mazayw
 // @match        https://music.yandex.ru/*
 // @icon         https://www.google.com/s2/favicons?domain=yandex.ru
+// @downloadURL  https://raw.githubusercontent.com/Mazayw/Yandex.Music-AdBlock/main/script.js
 // @license MIT
 // ==/UserScript==
 
